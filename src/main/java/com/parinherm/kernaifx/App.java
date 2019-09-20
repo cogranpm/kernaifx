@@ -1,3 +1,6 @@
+/* this is the older java initial build for testing
+ * 
+ */
 package com.parinherm.kernaifx;
 
 public class App{

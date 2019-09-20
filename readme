@@ -1,3 +1,7 @@
+This project is maven based, using openjavafx and eclipse xtend (a better java)
+the pom is based on an openjavafx plugin and xtend
+
+
 Maven Build
 mvn javafx:compile
 or just:
