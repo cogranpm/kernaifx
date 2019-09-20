@@ -1,0 +1,41 @@
+Maven Build
+mvn javafx:compile
+or just:
+mvn compile
+
+Run:
+mvn javafx:run
+
+JLink:
+mvn javafx:jlink
+
+then to run the image:
+target/image/bin/java -m com.parinherm.kernaifx/com.parinherm.kernaifx.App
+
+note the -m for a modular project
+argument is the module name, followed by the main class
+
+check out this link for information about the plugin:
+https://github.com/openjfx/javafx-maven-plugin
+
+note: this is the plugin configuration in the pom.xml:
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+			        <stripDebug>true</stripDebug>
+			        <compress>2</compress>
+			        <noHeaderFiles>true</noHeaderFiles>
+			        <noManPages>true</noManPages>           
+			        <launcher>kernaifx</launcher>
+			        <jlinkImageName>kernaifx</jlinkImageName>
+			        <jlinkZipName>kernaifxzip</jlinkZipName>			             
+                    <mainClass>com.parinherm.kernaifx.App</mainClass>
+                </configuration>
+            </plugin>
+
+
+this creates a zipped launcher with an executable named kernaifx, can just copy the zip and run the executable from the bin directory
+
+
